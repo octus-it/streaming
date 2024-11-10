@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-stream-title-sub',
@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './stream-title-sub.component.scss'
 })
 export class StreamTitleSubComponent {
+
+  @Input() title = ""
+  @Input() subTitle = ""
 
 }

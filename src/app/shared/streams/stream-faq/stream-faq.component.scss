@@ -1,0 +1,13 @@
+/* Animation pour ouvrir en glissement */
+.open-animation {
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+}
+
+details[open] .open-animation {
+  height: auto;
+  opacity: 1;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}

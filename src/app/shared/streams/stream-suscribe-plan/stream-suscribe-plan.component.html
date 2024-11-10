@@ -1,0 +1,79 @@
+<section>
+  <main>
+    <div class="flex items-end justify-between xs:flex-wrap lg:flex-nowrap gap-6">
+      <div class="flex flex-col gap-3">
+        <app-stream-title-sub
+          [title]="'Choose the plan that\'s right for you'"
+          [subTitle]="'Join StreamVibe and select from our flexible subscription options tailored to suit your viewing preferences. Get ready for non-stop entertainment!'"
+        ></app-stream-title-sub>
+      </div>
+
+      <div class="w-[270px]">
+        <div class="h-full w-full bg-darkCustom-dark-06 rounded-md border border-darkCustom-dark-15 py-2 px-2">
+          <ul class="w-full grid grid-cols-2 gap-2" id="default-tab" role="tablist">
+            <li class="inline-block" role="presentation">
+              <button
+                (click)="setActiveTab('profile')"
+                [ngClass]="{
+                  'bg-darkCustom-dark-12 text-white': activeTab === 'profile',
+                  'text-greyCustom-grey-60': activeTab !== 'profile'
+                }"
+                class="inline-block w-full p-3 rounded-md"
+                id="profile-tab"
+                role="tab"
+                aria-controls="profile"
+              >
+                Months
+              </button>
+            </li>
+            <li role="presentation">
+              <button
+                (click)="setActiveTab('dashboard')"
+                [ngClass]="{
+                  'bg-darkCustom-dark-12 text-white': activeTab === 'dashboard',
+                  'text-greyCustom-grey-60': activeTab !== 'dashboard'
+                }"
+                class="inline-block w-full p-3 rounded-md"
+                id="dashboard-tab"
+                role="tab"
+                aria-controls="dashboard"
+              >
+                Years
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <div id="default-tab-content">
+      <div
+        *ngIf="activeTab === 'profile'"
+        id="profile"
+        role="tabpanel"
+      >
+        <div class="grid xs:grid-col-1  lg:grid-cols-2 xl:grid-cols-3 gap-4">
+          <app-stream-suscribe-plan-card *ngFor="let items of [1,2,3]"></app-stream-suscribe-plan-card>
+        </div>
+      </div>
+      <div
+        *ngIf="activeTab === 'dashboard'"
+        id="dashboard"
+        role="tabpanel"
+      >
+       <div class="grid xs:grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+         <app-stream-suscribe-plan-card *ngFor="let items of [1,2,3]" [planFrequency]="'/year'"></app-stream-suscribe-plan-card>
+       </div>
+      </div>
+    </div>
+  </main>
+</section>
+
+
+
+<!--    <div class="grid xs:grid-cols-1 lg:grid-cols-2 lg:gap-8">-->
+
+
+

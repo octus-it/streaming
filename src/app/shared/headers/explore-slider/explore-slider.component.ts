@@ -1,7 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {initFlowbite} from "flowbite";
 import {NgForOf} from "@angular/common";
-import {StreamCategoryComponent} from "../../stream-category/stream-category.component";
+import {StreamCategoryComponent} from "../../streams/stream-category/stream-category.component";
 import {StreamTitleSubComponent} from "../../stream-title-sub/stream-title-sub.component";
 
 @Component({

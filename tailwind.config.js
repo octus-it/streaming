@@ -50,7 +50,8 @@ module.exports = {
           'grey-97': '#F7F7F8',
           'grey-99': '#FCFCFD'
         }
-      }
+      },
+
     },
 
   },
