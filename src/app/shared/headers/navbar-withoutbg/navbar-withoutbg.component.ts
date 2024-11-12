@@ -1,5 +1,6 @@
 import {Component, HostListener} from '@angular/core';
 import {NgClass} from "@angular/common";
+import {SearchBarService} from "../../../core/search-bar.service";
 
 @Component({
   selector: 'app-navbar-withoutbg',
@@ -23,6 +24,12 @@ export class NavbarWithoutbgComponent {
     // Tu peux ici appeler une méthode ou mettre à jour des variables en fonction du scroll
   }
 
+
+
+  constructor(
+    public searcheBarStateService: SearchBarService
+  ) { }
+
   activeTab: string = 'home';
 
   setActiveTab(tab: string) {
@@ -32,4 +39,14 @@ export class NavbarWithoutbgComponent {
   onScroll() {
     console.log("je scroll")
   }
+
+  activeSearchBar(){
+    this.searcheBarStateService.updateSearchBarState(true);
+    console.log("cliker sur active searche")
+  }
+
+  disableSearchBar(){
+    this.searcheBarStateService.updateSearchBarState(false);
+  }
+
 }
