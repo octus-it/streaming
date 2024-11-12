@@ -16,6 +16,13 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (typeof document !== 'undefined') {
+      import('flowbite').then(() => {
+        console.log('Flowbite loaded');
+      }).catch((err) => {
+        console.error('Error loading Flowbite:', err);
+      });
+    }
   }
 
   activeSearchBar(){
