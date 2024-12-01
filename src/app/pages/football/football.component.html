@@ -1,0 +1,20 @@
+<header class="xs:h-[639px] md:h-[689px] lg:h-[40px]  p-0 m-0 relative">
+  <app-navbar-withbg></app-navbar-withbg>
+</header>
+
+
+<section class="w-[90%] mx-auto py-24" *ngIf="documentIsLoaded">
+  <main>
+    <app-heros-with-header-bg></app-heros-with-header-bg>
+    <br>
+    <br>
+    <app-explore-slider-grid/>
+
+
+  </main>
+</section>
+
+<footer class="w-full overflow-x-hidden">
+  <app-footer-level1></app-footer-level1>
+  <app-footer-level2></app-footer-level2>
+</footer>

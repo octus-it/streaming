@@ -2,8 +2,12 @@
   <h2 class="text-white font-bold xs:text-[24px] md:text-[28pxp] lg:text-[38px]">
     {{title}}
   </h2>
-  <p class="text-greyCustom-grey-60 font-normal xs:text-[14px] md:text-[16pxp] lg:text-[18px] whitespace-normal break-words" >
-    {{subTitle}}
-  </p>
+
+  <ng-container >
+    <p *ngIf="activeSubTitle" class="text-greyCustom-grey-60 font-normal xs:text-[14px] md:text-[16pxp] lg:text-[18px] whitespace-normal break-words" >
+      {{subTitle}}
+    </p>
+  </ng-container>
+
 
 </div>

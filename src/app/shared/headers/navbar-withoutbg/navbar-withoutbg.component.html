@@ -72,6 +72,7 @@
                   'text-greyCustom-grey-60': activeTab !== 'football'
                 }"
             class="inline-block w-full p-3 rounded-md"
+            [routerLink]="'/football'"
           >
             Football
           </button>
@@ -92,6 +93,19 @@
 
         <li >
           <button
+            (click)="setActiveTab('news')"
+            [ngClass]="{
+                  'bg-darkCustom-dark-12 text-white': activeTab === 'news',
+                  'text-greyCustom-grey-60': activeTab !== 'news'
+                }"
+            class="inline-block w-full p-3 rounded-md"
+          >
+            News
+          </button>
+        </li>
+
+        <li >
+          <button
             (click)="setActiveTab('formations')"
             [ngClass]="{
                   'bg-darkCustom-dark-12 text-white': activeTab === 'formations',
@@ -99,9 +113,11 @@
                 }"
             class="inline-block w-full p-3 rounded-md"
           >
-            Formations
+           Contact Support
           </button>
         </li>
+
+
 
       </ul>
     </div>

@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {initFlowbite} from "flowbite";
 import {NgForOf} from "@angular/common";
 import {StreamCategoryComponent} from "../../streams/stream-category/stream-category.component";
@@ -17,6 +17,7 @@ import {StreamTitleSubComponent} from "../../stream-title-sub/stream-title-sub.c
 })
 export class ExploreSliderComponent implements OnInit{
   @ViewChild('childContainer') childContainer!: ElementRef;
+  @Input() activeSubTitle = true
 
   ngOnInit(): void {
     if (typeof document !== 'undefined') {

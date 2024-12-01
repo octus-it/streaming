@@ -1,12 +1,14 @@
 import {Component, HostListener} from '@angular/core';
 import {NgClass} from "@angular/common";
 import {SearchBarService} from "../../../core/search-bar.service";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-navbar-withoutbg',
   standalone: true,
   imports: [
-    NgClass
+    NgClass,
+    RouterLink
   ],
   templateUrl: './navbar-withoutbg.component.html',
   styleUrl: './navbar-withoutbg.component.scss'
